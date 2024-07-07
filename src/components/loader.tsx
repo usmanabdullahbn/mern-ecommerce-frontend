@@ -14,7 +14,7 @@ interface SkeletonProps {
 }
 
 export const Skeleton = ({ width = "unset", length = 3 }: SkeletonProps) => {
-  const skeletions = Array.from({ length }, (v, idx) => (
+  const skeletions = Array.from({ length }, (_, idx) => (
     <div key={idx} className="skeleton-shape"></div>
   ));
   return (
