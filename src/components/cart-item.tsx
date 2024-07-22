@@ -24,8 +24,8 @@ const CartItemCard = ({ cartItem,incrementHandler,decrementHandler,removeHandler
         <button onClick={()=> decrementHandler(cartItem)}>-</button>
         <p>{quantity}</p>
         <button onClick={()=> incrementHandler(cartItem)}>+</button>
-      </div>
-      <button onClick={()=> removeHandler(productId)}>
+      </div >
+      <button onClick={()=> removeHandler(productId)} className="bin">
         <FaTrash />
       </button>
     </div>
