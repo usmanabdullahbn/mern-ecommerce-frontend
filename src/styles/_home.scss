@@ -79,3 +79,71 @@
     }
   }
 }
+
+
+@media screen and (max-width: 450px) {
+  .product-card {
+    width: 40%;
+    height: 270px;
+    display: flex;
+    padding: 1rem;
+    flex: none;
+    @include flex(column, flex-start, center, 4px);
+    position: relative;
+    // background-color: blueviolet;
+    overflow: hidden;
+  
+    &:hover > div {
+      opacity: 1;
+    }
+  
+    img {
+      // @include square(calc(18.75rem - 3rem));
+      width: auto;
+      height: 70%;
+      object-fit: contain;
+      margin: 0;
+    }
+  }
+
+
+  .home {
+    padding: 2rem 3%;
+    display: flex;
+    flex-direction: column;
+  // min-height: calc(100vh - 4rem);
+    max-width: 1920px;
+    margin: auto;
+    width: 100%;
+  
+    > section {
+      width: 100%;
+      // height: 18.75rem;
+      height: 10.75rem;
+      margin: auto;
+      background: url("../assets/cover.jpg") no-repeat center / cover;
+    }
+    h1 {
+      @include heading(1px);
+      margin-top: 3rem;
+      @include flex(row, space-between, center);
+    }
+    .findmore {
+      font-size: 1rem;
+    }
+    > main {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0px;
+      flex-wrap: wrap;
+      overflow: hidden;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+}
